@@ -1,0 +1,42 @@
+vendor/laravel/framework/src/Illuminate/Routing/Console
+
+Modified
+
+ControllerMakeCommand.php
+
+/**
+* Get the default namespace for the class.
+*
+* @param  string  $rootNamespace
+* @return string
+*/
+protected function getDefaultNamespace($rootNamespace)
+{
+     return $rootNamespace.'\Modules\Api\Http\Controllers';
+}
+
+
+MiddlewareMakeCommand.php
+
+/**
+* Get the default namespace for the class.
+*
+* @param  string  $rootNamespace
+* @return string
+*/
+protected function getDefaultNamespace($rootNamespace)
+{
+	return $rootNamespace.'\Core\Http\Middleware';
+}
+
+
+/stubs
+
+
+Default
+
+use DummyRootNamespaceCore\Http\Controllers\Controller;
+
+Modified
+
+use DummyRootNamespaceHttp\Controllers\Controller;
