@@ -31,7 +31,8 @@
             "database"
         ],
         "psr-4": {
-            "Vialoja\\": "app/"
+            "Vialoja\\": "app/",
+            "Modeling\\": "app/Modeling/"
         }
     },
     "autoload-dev": {
