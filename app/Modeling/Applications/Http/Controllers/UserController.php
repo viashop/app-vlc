@@ -1,19 +1,20 @@
 <?php
 
-namespace DummyNamespace;
+namespace Modeling\Applications\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Modeling\Domains\Models\User\UserRepository;
 
-class DummyClass extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(UserRepository $repository)
     {
-        //
+        return $repository->getAll(true);
     }
 
     /**
@@ -34,7 +35,7 @@ class DummyClass extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

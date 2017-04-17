@@ -6,7 +6,7 @@ use DummyFullModelClass;
 use ParentDummyFullModelClass;
 use Illuminate\Http\Request;
 
-class DummyClass extends BaseController
+class DummyClass extends Controller
 {
     /**
      * Display a listing of the resource.
