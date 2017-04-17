@@ -179,6 +179,7 @@ return [
 
 
         Vialoja\Modeling\Applications\Providers\ModelingRouteServiceProvider::class,
+        Vialoja\Modeling\Applications\Providers\ModelingRepositoryServiceProvider::class,
 
 
 //        Vialoja\Application\Account\Providers\AccountRouteServiceProvider::class,

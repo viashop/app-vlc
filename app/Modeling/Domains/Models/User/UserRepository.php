@@ -2,7 +2,7 @@
 
 namespace Vialoja\Modeling\Domains\Models\User;
 
-class UserRepository
+interface UserRepository
 {
     //
 }
