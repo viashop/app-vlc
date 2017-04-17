@@ -177,12 +177,16 @@ return [
         Vialoja\Core\Providers\EventServiceProvider::class,
         Vialoja\Core\Providers\RouteServiceProvider::class,
 
-        Vialoja\Application\Account\Providers\AccountRouteServiceProvider::class,
-        Vialoja\Application\Api\Providers\ApiRouteServiceProvider::class,
-        Vialoja\Application\Panel\Store\Providers\StoreRouteServiceProvider::class,
-        Vialoja\Application\Panel\Control\Providers\ControlRouteServiceProvider::class,
-        Vialoja\Application\Panel\Support\Providers\SupportRouteServiceProvider::class,
-        Vialoja\Application\Panel\Wizard\Providers\WizardRouteServiceProvider::class,
+
+        Vialoja\Modeling\Applications\Providers\ModelingRouteServiceProvider::class,
+
+
+//        Vialoja\Application\Account\Providers\AccountRouteServiceProvider::class,
+//        Vialoja\Application\Api\Providers\ApiRouteServiceProvider::class,
+//        Vialoja\Application\Panel\Store\Providers\StoreRouteServiceProvider::class,
+//        Vialoja\Application\Panel\Control\Providers\ControlRouteServiceProvider::class,
+//        Vialoja\Application\Panel\Support\Providers\SupportRouteServiceProvider::class,
+//        Vialoja\Application\Panel\Wizard\Providers\WizardRouteServiceProvider::class,
 
         /**
          * Third-party packages Service Providers

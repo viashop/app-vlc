@@ -5,7 +5,6 @@ namespace DummyNamespace;
 use DummyFullModelClass;
 use ParentDummyFullModelClass;
 use Illuminate\Http\Request;
-use DummyRootNamespaceModeling\Applications\Http\Controllers\BaseController;
 
 class DummyClass extends BaseController
 {
