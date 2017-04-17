@@ -1,6 +1,6 @@
 <?php
 
-namespace Vialoja\Modeling\Domains\Models\User;
+namespace Modeling\Domains\Models\User;
 
 interface UserRepository
 {

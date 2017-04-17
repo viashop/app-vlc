@@ -1,10 +1,10 @@
 <?php
 
-namespace Vialoja\Modeling\Applications\Providers;
+namespace Modeling\Applications\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Vialoja\Modeling\Domains\Models\User\UserRepository;
-use Vialoja\Modeling\Infrastructures\Domains\User\UserRepositoryEloquent;
+use Modeling\Domains\Models\User\UserRepository;
+use Modeling\Infrastructures\Domains\User\UserRepositoryEloquent;
 
 class ModelingRepositoryServiceProvider extends ServiceProvider
 {

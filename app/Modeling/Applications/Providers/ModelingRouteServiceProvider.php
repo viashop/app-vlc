@@ -1,6 +1,6 @@
 <?php
 
-namespace Vialoja\Modeling\Applications\Providers;
+namespace Modeling\Applications\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -10,7 +10,7 @@ class ModelingRouteServiceProvider extends ServiceProvider
 {
 
 
-    protected $namespace = 'Vialoja\Modeling\Applications\Http\Controllers';
+    protected $namespace = 'Modeling\Applications\Http\Controllers';
 
 
     /**

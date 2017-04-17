@@ -1,9 +1,9 @@
 <?php
 
-namespace Vialoja\Modeling\Infrastructures\Domains\User;
+namespace Modeling\Infrastructures\Domains\User;
 
-use Vialoja\Modeling\Domains\Models\User\User;
-use Vialoja\Modeling\Domains\Models\User\UserRepository;
+use Modeling\Domains\Models\User\User;
+use Modeling\Domains\Models\User\UserRepository;
 
 class UserRepositoryEloquent implements UserRepository
 {

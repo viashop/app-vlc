@@ -1,12 +1,12 @@
 <?php
 
-namespace Vialoja\Modeling\Applications\Http\Controllers;
+namespace Modeling\Applications\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Vialoja\Modeling\Domains\Models\User\UserRepository;
+use Modeling\Domains\Models\User\UserRepository;
 
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
 
     /**
@@ -15,7 +15,8 @@ class HomeController extends BaseController
      */
     public function index(UserRepository $repository)
     {
-        $users = $repository->getAll(true);
-        return $this->view('home', compact('users'));
+        return $repository->getAll(true);
+//        $users = $repository->getAll(true);
+//        return $this->view('home', compact('users'));
     }
 }
