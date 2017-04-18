@@ -56,7 +56,7 @@ Route::get('/correios', function (){
     pr( Correios::frete($dados) );
 
     pr( Correios::cep('78053-040') );
-    pr( Correios::rastrear('AA123456789BR') );
+    pr( Correios::rastrear('PN871358668BR') );
     
     /*
         Retorno:

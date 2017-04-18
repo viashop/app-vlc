@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "71b574094e93908b3a1f4d04ce605501",
-    "content-hash": "125a0367bdfec21e7ac50b7fa7dc6456",
+    "hash": "96a0616b9b97ba953b3c737686903fd2",
+    "content-hash": "2f652e2d53ab7d272e12d843dd7eca7a",
     "packages": [
         {
             "name": "artesaos/seotools",
