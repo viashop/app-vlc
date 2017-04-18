@@ -196,11 +196,10 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Barryvdh\DomPDF\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Robbo\Presenter\PresenterServiceProvider::class,
-        //Cagartner\CorreiosConsulta\ServiceProvider::class,
+        Cagartner\CorreiosConsulta\ServiceProvider::class,
 
     ],
 
@@ -262,9 +261,8 @@ return [
         'OAuth'     => Artdarek\OAuth\Facade\OAuth::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'PDF' => Barryvdh\DomPDF\Facade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        //'Correios' => Cagartner\CorreiosConsulta\Facade::class,
+        'Correios' => Cagartner\CorreiosConsulta\Facade::class,
 
     ],
 
