@@ -200,6 +200,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Robbo\Presenter\PresenterServiceProvider::class,
+        Cagartner\CorreiosConsulta\ServiceProvider::class,
 
     ],
 
@@ -263,6 +264,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Correios' => Cagartner\CorreiosConsulta\Facade::class,
 
     ],
 
