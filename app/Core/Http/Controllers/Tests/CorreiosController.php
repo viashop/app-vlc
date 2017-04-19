@@ -4,7 +4,7 @@ namespace Vialoja\Core\Http\Controllers\Tests;
 
 use Illuminate\Http\Request;
 use Vialoja\Core\Http\Controllers\Controller;
-use Correios;
+use Correios;   
 
 class CorreiosController extends Controller
 {
