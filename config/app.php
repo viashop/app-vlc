@@ -200,6 +200,7 @@ return [
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Robbo\Presenter\PresenterServiceProvider::class,
         Cagartner\CorreiosConsulta\ServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -258,11 +259,12 @@ return [
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
         'Twitter' => Artesaos\SEOTools\Facades\TwitterCard::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
-        'OAuth'     => Artdarek\OAuth\Facade\OAuth::class,
+        'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Correios' => Cagartner\CorreiosConsulta\Facade::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
