@@ -4,6 +4,7 @@ namespace Modeling\Applications\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Modeling\Domains\Models\User\UserRepository;
+use Vialoja\Helpers\FormatTime;
 
 class UserController extends Controller
 {
@@ -14,7 +15,9 @@ class UserController extends Controller
      */
     public function index(UserRepository $repository)
     {
-        return $repository->getAll(true);
+
+        echo FormatTime::format(1492490208);
+        //return $repository->getAll(true);
     }
 
     /**
