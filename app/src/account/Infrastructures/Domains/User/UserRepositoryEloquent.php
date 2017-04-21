@@ -5,7 +5,7 @@ namespace Account\Infrastructures\Domains\User;
 use Account\Applications\Http\Request\RegisterRequest;
 use Account\Domains\Models\User\User;
 use Account\Domains\Models\User\UserRepository;
-use Dompdf\Exception;
+use Exception;
 use Illuminate\Support\Facades\Config;
 
 /**
@@ -83,11 +83,11 @@ class UserRepositoryEloquent implements UserRepository
     }
 
     /**
-     * Register User
+     * Register Data User
      * @param RegisterRequest $request
      * @return mixed
      */
-    public function create(RegisterRequest $request)
+    public function createData(RegisterRequest $request)
     {
         if ($this->existsEmail($request->email)) {
             throw new Exception( Config::get('constants.USER_IS_REGISTERED') );

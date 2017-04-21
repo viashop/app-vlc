@@ -21,7 +21,7 @@ class RoleRepositoryEloquent implements RoleRepository
         $this->role = $role;
     }
 
-    public function getRolePerAttach()
+    public function getRoleForAttach()
     {
         return $this->role->where('name','shop_admin')->first();
     }

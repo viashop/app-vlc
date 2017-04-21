@@ -1,8 +1,9 @@
 <?php
 
+use Control\Domains\Models\Role\Role;
 use Illuminate\Database\Seeder;
-use Vialoja\Entities\User;
-use Vialoja\Entities\Role;
+use Control\Domains\Models\User\User;
+
 
 class UserTableSeeder extends Seeder
 {
