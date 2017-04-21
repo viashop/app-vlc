@@ -2,15 +2,12 @@
 
 namespace Account\Applications\Http\Controllers;
 
+use Account\Applications\Http\Request\RegisterRequest;
+use Account\Infrastructures\Storage\SessionBuilder;
+use Account\Domains\Models\User\UserService;
 use Illuminate\Support\Facades\URL;
-
-use Vialoja\Contracts\Repositories\Account\UserRepositoryInterface;
-use Vialoja\Http\Requests\Account\RegisterRequest;
-use Vialoja\Repositories\Account\UserRepository;
-use Vialoja\Traits\Storage\StorageDataUser;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Exception;
-
 
 /**
  * Class RegisterController
@@ -19,60 +16,52 @@ use Exception;
 class RegisterController extends Controller
 {
 
-    use StorageDataUser;
+    use SessionBuilder;
 
     /**
-     * @var UserRepository
+     * @var UserService
      */
-    protected $repository;
+    private $service;
 
     /**
      * RegisterController constructor.
-     * @param UserRepository $request
+     * @param UserService $service
      */
-    public function __construct(UserRepository $request)
+    public function __construct(UserService $service)
     {
-        $this->repository = $request;
+        $this->service = $service;
     }
 
     /**
+     * View Register User Via Email
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function register()
     {
-
         SEOMeta::setTitle('Criar conta gerenciar Loja Virtual');
         SEOMeta::setDescription('Na vialoja você encontra tudo o que precisa para abrir hoje sua loja virtual e começar a vender.');
         SEOMeta::setCanonical(URL::current());
-
-        return view('register');
-
+        return $this->view('register');
     }
 
-
     /**
+     * Receive Post Register New User
      * @param RegisterRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function registerPost(RegisterRequest $request)
     {
-
         try {
 
             $request->session()->flash('name', $request->name);
             $request->session()->flash('email', $request->email);
 
-            if ($this->repository instanceof UserRepositoryInterface) {
-                $data = $this->repository->registerUser($request);
-                return $this->storage($data);
-            }
+            $data = $this->service->register($request);
+            return $this->storageSessionBuilder($data);
 
         } catch (Exception $e) {
-
             return redirect()->back()->with('message_error', $e->getMessage());
-
         }
-
     }
 
 }

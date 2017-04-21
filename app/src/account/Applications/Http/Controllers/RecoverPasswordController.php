@@ -42,7 +42,7 @@ class RecoverPasswordController extends Controller
         SEOMeta::setDescription('Entre com Login e Senha para acessar sua Conta, e gerencie sua Loja Virtual.');
         SEOMeta::setCanonical(URL::current());
 
-        return view('recover-password');
+        return $this->view('recover-password');
     }
 
     /**
@@ -76,7 +76,7 @@ class RecoverPasswordController extends Controller
         SEOMeta::setDescription('Para finalizar a recuperação da senha você deve seguir os passos que estão no email recebido.');
         SEOMeta::setCanonical(URL::current());
 
-        return view('recover-password-notice');
+        return $this->view('recover-password-notice');
     }
 
 }

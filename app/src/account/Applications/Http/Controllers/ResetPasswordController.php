@@ -55,7 +55,7 @@ class ResetPasswordController extends Controller
 
         }
 
-        return view('reset-password', compact('token')) ;
+        return $this->view('reset-password', compact('token')) ;
     }
 
 
