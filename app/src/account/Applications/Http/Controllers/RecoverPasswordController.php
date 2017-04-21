@@ -3,7 +3,7 @@
 namespace Account\Applications\Http\Controllers;
 
 use Illuminate\Support\Facades\URL;
-
+use Illuminate\Support\Facades\Config;
 use Vialoja\Contracts\Repositories\Account\RecoverPasswordRepositoryInterface;
 use Vialoja\Http\Requests\Account\RecoverPasswordRequest;
 use Vialoja\Repositories\Account\RecoverPasswordRepository;
@@ -38,8 +38,8 @@ class RecoverPasswordController extends Controller
     public function recover()
     {
 
-        SEOMeta::setTitle('Recuperar Senha');
-        SEOMeta::setDescription('Entre com Login e Senha para acessar sua Conta, e gerencie sua Loja Virtual.');
+        SEOMeta::setTitle( Config::get('constant-account.RECOVER_TITLE') );
+        SEOMeta::setDescription( Config::get('constant-account.RECOVER_DESC') );
         SEOMeta::setCanonical(URL::current());
 
         return $this->view('recover-password');
@@ -71,11 +71,9 @@ class RecoverPasswordController extends Controller
      */
     public function notice()
     {
-
-        SEOMeta::setTitle('Recuperação da senha solicitada!');
-        SEOMeta::setDescription('Para finalizar a recuperação da senha você deve seguir os passos que estão no email recebido.');
+        SEOMeta::setTitle( Config::get('constant-account.RECOVER_NOTICE_TITLE') );
+        SEOMeta::setDescription( Config::get('constant-account.RECOVER_NOTICE_DESC') );
         SEOMeta::setCanonical(URL::current());
-
         return $this->view('recover-password-notice');
     }
 

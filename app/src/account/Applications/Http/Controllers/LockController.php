@@ -3,14 +3,15 @@
 namespace Account\Applications\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class LockController extends Controller
 {
     public function lock()
     {
 
-        SEOMeta::setTitle('Fazer Login');
-        SEOMeta::setDescription('Entre com Login e Senha para acessar sua Conta, e gerencie sua Loja Virtual.');
+        SEOMeta::setTitle( Config::get('constant-account.LOCK_TITLE') );
+        SEOMeta::setDescription( Config::get('constant-account.LOCK_DESC' ) );
         SEOMeta::setCanonical(route('login'));
         return $this->view('lock');
     }

@@ -2,10 +2,11 @@
 
 namespace Account\Applications\Http\Controllers;
 
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Config;
 use Account\Applications\Http\Request\RegisterRequest;
 use Account\Infrastructures\Storage\SessionBuilder;
 use Account\Domains\Models\User\UserService;
-use Illuminate\Support\Facades\URL;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Exception;
 
@@ -38,8 +39,8 @@ class RegisterController extends Controller
      */
     public function register()
     {
-        SEOMeta::setTitle('Criar conta gerenciar Loja Virtual');
-        SEOMeta::setDescription('Na vialoja você encontra tudo o que precisa para abrir hoje sua loja virtual e começar a vender.');
+        SEOMeta::setTitle( Config::get('constant-account.REGISTER_TITLE') );
+        SEOMeta::setDescription( Config::get('constant-account.REGISTER_DESC') );
         SEOMeta::setCanonical(URL::current());
         return $this->view('register');
     }
