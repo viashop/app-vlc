@@ -177,17 +177,16 @@ return [
         Vialoja\Core\Providers\EventServiceProvider::class,
         Vialoja\Core\Providers\RouteServiceProvider::class,
 
+        /*
+         * Modularization SRC Service Providers...
+         */ 
+        Account\Applications\Providers\RouteServiceProvider::class,
+        Account\Applications\Providers\RepositoryServiceProvider::class,
+        OAuth\Applications\Providers\RouteServiceProvider::class,
+        OAuth\Applications\Providers\RepositoryServiceProvider::class,
+        Modeling\Applications\Providers\RouteServiceProvider::class,
+        Modeling\Applications\Providers\RepositoryServiceProvider::class,
 
-        Modeling\Applications\Providers\ModelingRouteServiceProvider::class,
-        Modeling\Applications\Providers\ModelingRepositoryServiceProvider::class,
-
-
-//        Vialoja\Application\Account\Providers\AccountRouteServiceProvider::class,
-//        Vialoja\Application\Api\Providers\ApiRouteServiceProvider::class,
-//        Vialoja\Application\Panel\Store\Providers\StoreRouteServiceProvider::class,
-//        Vialoja\Application\Panel\Control\Providers\ControlRouteServiceProvider::class,
-//        Vialoja\Application\Panel\Support\Providers\SupportRouteServiceProvider::class,
-//        Vialoja\Application\Panel\Wizard\Providers\WizardRouteServiceProvider::class,
 
         /**
          * Third-party packages Service Providers

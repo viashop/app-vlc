@@ -34,7 +34,15 @@
         ],
         "psr-4": {
             "Vialoja\\": "app/",
-            "Modeling\\": "app/Modeling/"
+            "Account\\": "app/src/account/",  
+            "Desk\\": "app/src/dashboard/helpdesk/",                     
+            "GControl\\": "app/src/dashboard/general-control/",
+            "Admin\\": "app/src/dashboard/admin/",
+            "Wizard\\": "app/src/dashboard/wizard/",
+            "Themes\\": "app/src/themes/",
+            "OAuth\\": "app/src/oauth/",
+            "Api\\": "app/src/api/",
+            "Modeling\\": "app/src/modeling/"            
         }
     },
     "autoload-dev": {
