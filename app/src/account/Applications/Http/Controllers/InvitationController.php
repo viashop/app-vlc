@@ -12,8 +12,8 @@ class InvitationController extends Controller
     public function ss()
     {
 
-        SEOMeta::setTitle( Config::get('constant-account.INVITATION_TITLE') );
-        SEOMeta::setDescription( Config::get('constant-account.INVITATION_DESC' ) );
+        SEOMeta::setTitle( Config::get('constants-account.INVITATION_TITLE') );
+        SEOMeta::setDescription( Config::get('constants-account.INVITATION_DESC' ) );
         SEOMeta::setCanonical(route('login'));
 
     }

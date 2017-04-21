@@ -40,7 +40,7 @@ class ResetPasswordController extends Controller
     public function reset(Request $request)
     {
 
-        SEOMeta::setTitle( Config::get('constant-account.RESET_TITLE') );
+        SEOMeta::setTitle( Config::get('constants-account.RESET_TITLE') );
 
         $token = $request->route('token');
 

@@ -39,8 +39,8 @@ class RegisterController extends Controller
      */
     public function register()
     {
-        SEOMeta::setTitle( Config::get('constant-account.REGISTER_TITLE') );
-        SEOMeta::setDescription( Config::get('constant-account.REGISTER_DESC') );
+        SEOMeta::setTitle( Config::get('constants-account.REGISTER_TITLE') );
+        SEOMeta::setDescription( Config::get('constants-account.REGISTER_DESC') );
         SEOMeta::setCanonical(URL::current());
         return $this->view('register');
     }

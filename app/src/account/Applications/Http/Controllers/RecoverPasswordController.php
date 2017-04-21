@@ -38,8 +38,8 @@ class RecoverPasswordController extends Controller
     public function recover()
     {
 
-        SEOMeta::setTitle( Config::get('constant-account.RECOVER_TITLE') );
-        SEOMeta::setDescription( Config::get('constant-account.RECOVER_DESC') );
+        SEOMeta::setTitle( Config::get('constants-account.RECOVER_TITLE') );
+        SEOMeta::setDescription( Config::get('constants-account.RECOVER_DESC') );
         SEOMeta::setCanonical(URL::current());
 
         return $this->view('recover-password');
@@ -71,8 +71,8 @@ class RecoverPasswordController extends Controller
      */
     public function notice()
     {
-        SEOMeta::setTitle( Config::get('constant-account.RECOVER_NOTICE_TITLE') );
-        SEOMeta::setDescription( Config::get('constant-account.RECOVER_NOTICE_DESC') );
+        SEOMeta::setTitle( Config::get('constants-account.RECOVER_NOTICE_TITLE') );
+        SEOMeta::setDescription( Config::get('constants-account.RECOVER_NOTICE_DESC') );
         SEOMeta::setCanonical(URL::current());
         return $this->view('recover-password-notice');
     }

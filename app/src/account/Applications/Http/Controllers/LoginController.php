@@ -42,8 +42,8 @@ class LoginController extends Controller
      */
     public function index()
     {
-        SEOMeta::setTitle( Config::get('constant-account.LOGIN_TITLE') );
-        SEOMeta::setDescription( Config::get('constant-account.LOGIN_DESC')) ;
+        SEOMeta::setTitle( Config::get('constants-account.LOGIN_TITLE') );
+        SEOMeta::setDescription( Config::get('constants-account.LOGIN_DESC')) ;
         SEOMeta::setCanonical(URL::current());
         return $this->view('login');
     }
