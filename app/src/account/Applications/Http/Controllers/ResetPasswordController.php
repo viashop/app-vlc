@@ -4,7 +4,6 @@ namespace Account\Applications\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
-
 use Vialoja\Contracts\Repositories\Account\RecoverPasswordRepositoryInterface;
 use Vialoja\Http\Requests\Account\ResetPasswordRequest;
 use Vialoja\Repositories\Account\RecoverPasswordRepository;
@@ -41,7 +40,7 @@ class ResetPasswordController extends Controller
     public function reset(Request $request)
     {
 
-        SEOMeta::setTitle('Redefinição de senha!');
+        SEOMeta::setTitle( Config::get('constants-account.RESET_TITLE') );
 
         $token = $request->route('token');
 
@@ -55,7 +54,7 @@ class ResetPasswordController extends Controller
 
         }
 
-        return view('reset-password', compact('token')) ;
+        return $this->view('reset-password', compact('token')) ;
     }
 
 

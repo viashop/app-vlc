@@ -4,7 +4,8 @@
     <body>
         @include('account::partials.navbar')
         @yield('main-content')
-    </body>
-    @include('account::partials.scriptshtml')
-    @include('account::partials.pwstrength')
+        
+        @include('account::partials.scriptshtml')
+    	@include('account::partials.pwstrength')
+    </body>    
 </html>

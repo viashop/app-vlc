@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth\Domains\Models\User;
+namespace Account\Domains\Models\User;
 
 class UserWasRemoved
 {

@@ -94,8 +94,8 @@ class UserService
 
         ValidatePassword::isValid($request->password);
 
-        $user = $this->user->create($request);
-        $user->roles()->attach($this->role->getRolePerAttach());
+        $user = $this->user->createData($request);
+        $user->roles()->attach($this->role->getRoleForAttach());
         $data = $this->user->getFindOrFail($user->id);
 
         $stdClass = new stdClass();

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Vialoja\Entities\Permission;
+use Control\Domains\Models\Permission\Permission;
 
 class PermissionsTableSeeder extends Seeder
 {
