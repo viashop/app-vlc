@@ -24,7 +24,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapEmailRoutes();
         $this->mapInvitationRoutes();
         $this->mapLockRoutes();    
-        $this->mapLoginRoutes();
+        $this->mapAutheticateRoutes();
         $this->mapRecoverRoutes();
         $this->mapRegisterRoutes();
         $this->mapResetRoutes();
@@ -103,13 +103,13 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapLoginRoutes()
+    protected function mapAutheticateRoutes()
     {
 
         Route::prefix('/login')
             ->middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('app/src/account/Applications/routes/login.php'));
+            ->group(base_path('app/src/account/Applications/routes/autheticate.php'));
 
     }
 

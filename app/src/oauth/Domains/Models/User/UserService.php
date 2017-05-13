@@ -5,7 +5,7 @@ namespace Account\Domains\Models\User;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Hash;
 use Account\Applications\Http\Request\RegisterRequest;
-use Account\Applications\Http\Request\LoginRequest;
+use Account\Applications\Http\Request\AuthenticateRequest;
 use Account\Domains\Models\Role\RoleRepository;
 use Vialoja\Helpers\ValidatePassword;
 
@@ -47,11 +47,11 @@ class UserService
     /**
      * Authenticate User
      *
-     * @param LoginRequest $request
+     * @param AuthenticateRequest $request
      * @return mixed
      * @throws Exception
      */
-    public function autheticate(LoginRequest $request)
+    public function autheticate(AuthenticateRequest $request)
     {
 
         $stdClass = new stdClass();

@@ -5,7 +5,7 @@ namespace Account\Applications\Http\Controllers;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Http\Request;
-use Account\Applications\Http\Request\LoginRequest;
+use Account\Applications\Http\Request\AuthenticateRequest;
 use Account\Domains\Models\User\UserService;
 use Account\Infrastructures\Storage\SessionBuilder;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -15,7 +15,7 @@ use Exception;
  * Class LoginController
  * @package Vialoja\Http\Controllers\Account
  */
-class LoginController extends Controller
+class AutheticateController extends Controller
 {
 
     use SessionBuilder;
@@ -50,10 +50,10 @@ class LoginController extends Controller
 
     /**
      * Authenticate User
-     * @param LoginRequest $request
+     * @param AuthenticateRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function authenticate(LoginRequest $request)
+    public function authenticate(AuthenticateRequest $request)
     {
         try {
             $data = $this->service->autheticate($request);

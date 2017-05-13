@@ -1,11 +1,11 @@
 <?php
 
-namespace Account\Infrastructures\Domains\Role;
+namespace Account\Infrastructures\Domains\Models\Role;
 
 use Account\Domains\Models\Role\Role;
 use Account\Domains\Models\Role\RoleRepository;
 
-class RoleRepositoryEloquent implements RoleRepository
+class EloquentRoleRepository implements RoleRepository
 {
     /**
      * @var Role

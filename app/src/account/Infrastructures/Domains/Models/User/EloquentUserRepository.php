@@ -1,6 +1,6 @@
 <?php
 
-namespace Account\Infrastructures\Domains\User;
+namespace Account\Infrastructures\Domains\Models\User;
 
 use Account\Applications\Http\Request\RegisterRequest;
 use Account\Domains\Models\User\User;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Config;
  * Class UserRepositoryEloquent
  * @package Account\Infrastructures\Domains\User
  */
-class UserRepositoryEloquent implements UserRepository
+class EloquentUserRepository implements UserRepository
 {
 
     /**
