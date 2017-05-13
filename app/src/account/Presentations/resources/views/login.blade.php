@@ -44,7 +44,7 @@
                                     </span>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Informe seu email</label>
-                                        {{ Form::email('email', Session::get('email_login'), $attributes = ['class' => 'form-control', 'required' => 'autofocus'] ) }}
+                                        {{ Form::email('email', Session::get('email_login'), $attributes = ['class' => 'form-control', 'required' => 'autofocus', 'autofocus'] ) }}
                                         {{ Session::forget('email_login') }}
                                     </div>
                                 </div>
