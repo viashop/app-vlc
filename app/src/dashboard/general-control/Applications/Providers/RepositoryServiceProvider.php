@@ -1,10 +1,11 @@
 <?php
 
-namespace Control\Domains\Models\Permission;
+namespace Control\Applications\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Control\Domains\Models\User\UserRepository;
-use Control\Infrastructures\Domains\User\UserRepositoryEloquent;
+use Control\Domains\Models\User\UserRepositoryInterface;
+use Control\Infrastructures\Domains\User\EloquentUserRepository;
+
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,6 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(UserRepository::class, UserRepositoryEloquent::class);
+        $this->app->bind(UserRepositoryInterface::class, EloquentUserRepository::class);
     }
 }

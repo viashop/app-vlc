@@ -1,6 +1,6 @@
 <?php
 
-namespace Control\Domains\Models\Permission;
+namespace Control\Applications\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -8,7 +8,6 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
-
 
     protected $namespace = 'Control\Applications\Http\Controllers';
 
@@ -21,8 +20,8 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $this->mapDashboardRoutes();
-        $this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'control');
+        $this->mapWebRoutes();
+        //$this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'desk');
 
 
     }
@@ -39,20 +38,19 @@ class RouteServiceProvider extends ServiceProvider
 
 
     /**
-     * Define the "general-control" routes for the application.
+     * Define the "web" routes for the application.
      *
      * These routes are typically stateless.
      *
      * @return void
      */
-    protected function mapDashboardRoutes()
+    protected function mapWebRoutes()
     {
-        Route::prefix('/painel')
+        Route::prefix('/controle')
             //->domain('api.vialoja.com.br')
             ->middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('app/src/general-control/Applications/routes/dashboard.php'));
+            ->group(base_path('app/src/dashboard/general-control/Applications/routes/web.php'));
     }
-
 
 }

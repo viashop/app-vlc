@@ -17,11 +17,26 @@ abstract class EloquentAbstractRepository implements EloquentRepositoryInterface
     protected $model;
 
     /**
+     * Get All Data
+     * @param bool $paginate
+     * @param int $take
      * @return mixed
      */
-    public function getAll()
+    public function getAll($paginate=false, $take=15)
     {
-        return $this->model->all();
+
+        $query = $this->model;
+
+        if ($paginate) {
+            return $query->paginate($take);
+        }
+
+        if (is_int($take)) {
+            $query->take($take);
+        }
+
+        return $query->get();
+
     }
 
     /**

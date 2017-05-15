@@ -9,7 +9,6 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 class RouteServiceProvider extends ServiceProvider
 {
 
-
     protected $namespace = 'Modeling\Applications\Http\Controllers';
 
 
@@ -22,8 +21,7 @@ class RouteServiceProvider extends ServiceProvider
     {
 
         $this->mapWebRoutes();
-        $this->mapApiRoutes();
-        $this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'modeling');
+        //$this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'desk');
 
 
     }
@@ -48,26 +46,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::prefix('/')
+        Route::prefix('/modeling')
             //->domain('api.vialoja.com.br')
             ->middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('app/src/modeling/Applications/routes/modeling.php'));
+            ->group(base_path('app/src/modeling/Applications/routes/web.php'));
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
-    {
-        Route::prefix('/api')
-            //->domain('api.vialoja.com.br')
-            ->middleware('api')
-            ->namespace($this->namespace)
-            ->group(base_path('app/src/modeling/Applications/routes/api.php'));
-    }
 }

@@ -182,8 +182,19 @@ return [
          */ 
         Account\Applications\Providers\RouteServiceProvider::class,
         Account\Applications\Providers\RepositoryServiceProvider::class,
+
         OAuth\Applications\Providers\RouteServiceProvider::class,
         OAuth\Applications\Providers\RepositoryServiceProvider::class,
+
+        Wizard\Applications\Providers\RouteServiceProvider::class,
+        Wizard\Applications\Providers\RepositoryServiceProvider::class,  
+
+        Admin\Applications\Providers\RouteServiceProvider::class,
+        Admin\Applications\Providers\RepositoryServiceProvider::class,
+
+        Helpdesk\Applications\Providers\RouteServiceProvider::class,
+        Helpdesk\Applications\Providers\RepositoryServiceProvider::class,
+
         Modeling\Applications\Providers\RouteServiceProvider::class,
         Modeling\Applications\Providers\RepositoryServiceProvider::class,
 

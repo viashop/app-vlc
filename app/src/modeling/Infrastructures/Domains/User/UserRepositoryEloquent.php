@@ -3,43 +3,24 @@
 namespace Modeling\Infrastructures\Domains\User;
 
 use Modeling\Domains\Models\User\User;
-use Modeling\Domains\Models\User\UserRepository;
+use Modeling\Domains\Models\User\UserRepositoryInterface;
+use Vialoja\Core\Repositories\EloquentAbstractRepository;
 
-class UserRepositoryEloquent implements UserRepository
+/**
+ * Class EloquentUserRepository
+ * @package Modeling\Infrastructures\Domains\User
+ */
+class EloquentUserRepository extends EloquentAbstractRepository implements UserRepositoryInterface
 {
-
-    protected $user;
 
     /**
      * EloquentUserRepository constructor.
-     * @param User $user
+     * @param User $model
      */
-    public function __construct(User $user)
+    public function __construct(User $model)
     {
-        $this->user = $user;
+        $this->model = $model;
     }
 
-    /**
-     * Get All Users
-     * @param bool $paginate
-     * @param int $take
-     * @return array
-     */
-    public function getAll($paginate=false, $take=15)
-    {
-
-        $query = $this->user;
-
-        if ($paginate) {
-            return $query->paginate($take);
-        }
-
-        if (is_int($take)) {
-            $query->take($take);
-        }
-
-        return $query->get();
-
-    }
 
 }

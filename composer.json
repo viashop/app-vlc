@@ -35,7 +35,7 @@
         "psr-4": {
             "Vialoja\\": "app/",
             "Account\\": "app/src/account/",  
-            "Desk\\": "app/src/dashboard/helpdesk/",                     
+            "Helpdesk\\": "app/src/dashboard/helpdesk/",                     
             "Control\\": "app/src/dashboard/general-control/",
             "Admin\\": "app/src/dashboard/admin/",
             "Wizard\\": "app/src/dashboard/wizard/",
