@@ -9,9 +9,11 @@ namespace Vialoja\Core\Repositories\Contracts;
 interface EloquentRepositoryInterface
 {
     /**
+     * @param bool $paginate
+     * @param int $take
      * @return mixed
      */
-    public function getAll();
+    public function getAll($paginate=false, $take=15);
 
     /**
      * @param $id
