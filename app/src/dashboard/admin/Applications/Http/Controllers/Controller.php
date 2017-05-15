@@ -14,7 +14,7 @@ class Controller extends BaseController
     /**
      * @var string
      */
-    protected $viewNamespace = 'admin::';
+    protected $viewNamespace = 'default::';
 
 
     /**

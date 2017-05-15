@@ -21,9 +21,8 @@ class DefaultController extends Controller
 
     public function index()
     {
-
-
-        dd( $this->user->getAll() );
-
+        $users = $this->user->getAll(true, 5);
+        return $this->view('dashboard', compact('users'));
     }
+    
 }

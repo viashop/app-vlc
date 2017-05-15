@@ -1,4 +1,4 @@
-@extends("modeling::app")
+@extends("control::app")
 
 @section('body')
     <h1>Titulo Modeling H1</h1>

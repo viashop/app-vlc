@@ -183,6 +183,9 @@ return [
         Account\Applications\Providers\RouteServiceProvider::class,
         Account\Applications\Providers\RepositoryServiceProvider::class,
 
+        Control\Applications\Providers\RouteServiceProvider::class,
+        Control\Applications\Providers\RepositoryServiceProvider::class,
+
         OAuth\Applications\Providers\RouteServiceProvider::class,
         OAuth\Applications\Providers\RepositoryServiceProvider::class,
 

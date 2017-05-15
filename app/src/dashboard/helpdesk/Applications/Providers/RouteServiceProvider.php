@@ -21,8 +21,7 @@ class RouteServiceProvider extends ServiceProvider
     {
 
         $this->mapWebRoutes();
-        //$this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'desk');
-
+        $this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'default');
 
     }
 

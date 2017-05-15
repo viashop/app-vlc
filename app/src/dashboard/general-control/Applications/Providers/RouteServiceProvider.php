@@ -21,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
     {
 
         $this->mapWebRoutes();
-        //$this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'desk');
+        $this->loadViewsFrom(__DIR__.'/../../Presentations/resources/views', 'control');
 
 
     }
@@ -46,7 +46,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::prefix('/controle')
+        Route::prefix('/painel')
             //->domain('api.vialoja.com.br')
             ->middleware('web')
             ->namespace($this->namespace)
